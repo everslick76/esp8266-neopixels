@@ -1,7 +1,3 @@
-// #include <EspWifi.h>
-// #include <EspOta.h>
-// #include <EspHttp.h>
-#include <EspSerial.h>
 #include <EspNeopixel.h>
 
 // pins
@@ -15,25 +11,7 @@
 
 // bool high = true;
 
-// EspWifi wifi;
-// EspOta ota;
-// EspHttp http;
 EspNeopixel pixels;
-static EspSerial serial;
-
-//http call
-// int restPort = 80;
-// IPAddress restServer(192,168,0,50);
-// WiFiClient client;
-//
-// void makeHttpCall() {
-//   if (client.connect(restServer, restPort)) {
-//     client.println("POST /search?q=arduino HTTP/1.1");
-//     client.println("Host: www.google.com");
-//     client.println("Connection: close");
-//     client.println();
-//   }
-// }
 
 //setup and main loop
 void setup() {
@@ -78,20 +56,10 @@ void setup() {
   // digitalWrite(16, LOW);
 
   // startup
-  serial.startSerial();
-  // wifi.startDynamicIp();
-  // wifi.startStaticIp(IPAddress(192,168,0,76));
-  // ota.startOta();
-  // http.startHttp();
   pixels.setup();
-
-  serial.println("INIT: Setup complete.");
 }
 
 void loop() {
-
-  // ArduinoOTA.handle();
-  //http.handleClient();
 
   //flashLed(16, 500);
 
